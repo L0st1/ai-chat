@@ -1,0 +1,16 @@
+{
+  "name": "ai-chat",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@9.15.4",
+  "scripts": {
+    "dev": "pnpm --parallel --filter @ai-chat/web --filter @ai-chat/server run dev",
+    "dev:web": "pnpm --filter @ai-chat/web dev",
+    "dev:server": "pnpm --filter @ai-chat/server dev",
+    "build": "pnpm -r run build",
+    "typecheck": "pnpm -r run typecheck"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "@ai-chat/web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "vue-tsc -b --noEmit"
+  },
+  "dependencies": {
+    "@ai-chat/shared": "workspace:*",
+    "@vueuse/core": "^14.2.1",
+    "code-inspector-plugin": "^1.5.1",
+    "markstream-vue": "^0.0.12",
+    "shiki": "^3.13.0",
+    "stream-markdown": "^0.0.15",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "typescript": "^5.7.3",
+    "unocss": "^66.6.8",
+    "vite": "^6.0.7",
+    "vue-tsc": "^2.2.0"
+  }
+}
