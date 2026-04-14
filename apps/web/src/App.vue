@@ -108,6 +108,12 @@ function send() {
     },
   });
 }
+
+function onNewChat() {
+  messages.value = [];
+  draft.value = "";
+  stopGeneration();
+}
 </script>
 
 <template>
@@ -117,7 +123,7 @@ function send() {
     <header
       class="flex shrink-0 items-center justify-between gap-3 border-b border-neutral-200 px-4 py-3 dark:border-neutral-800"
     >
-      <span class="text-sm font-medium tracking-tight text-neutral-900 dark:text-neutral-100">新对话</span>
+      <span @click="onNewChat" class="cursor-pointer text-sm font-medium tracking-tight text-neutral-900 dark:text-neutral-100">新对话</span>
       <div class="flex min-w-0 flex-1 items-center justify-end gap-2">
         <span class="truncate text-xs text-neutral-500 max-sm:hidden">
           SSE · /api/chat-stream
