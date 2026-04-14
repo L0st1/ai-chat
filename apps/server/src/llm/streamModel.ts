@@ -125,8 +125,9 @@ export async function pipeModelStreamToSse(
         },
         body: JSON.stringify({
           model: process.env.LLM_MODEL,
-          messages,
+          messages: messages.slice(-(process.env.LLM_MESSAGES_MAX_LENGTH ?? 10)), // 只保留最近10条
           stream: true,
+          max_tokens: process.env.LLM_MAX_TOKENS ?? 500, // 最大token数
         }),
         signal,
         ...(dispatcher ? { dispatcher } : {}),
